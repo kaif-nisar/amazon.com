@@ -2,8 +2,8 @@ import { Router } from "express";
 
 const router = Router();
 
-router.route("/index.html").get((req,res) => {
-    res.send({gill:"djskfhdsjkfh jfdhfsdgjd jkdhsfjsdj"})
+router.route("/randomData").get((req,res) => {
+    res.send({kaif:"this is the data received from kaif"})
 })
 
 export default router;
