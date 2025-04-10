@@ -1,0 +1,281 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+        Select a Shipping Address
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .header a {
+            color: #FF9900;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #FF0000;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #FF9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .optional {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .optional label {
+            font-weight: normal;
+        }
+
+        .optional input[type="text"] {
+            border: 1px solid #ccc;
+        }
+
+        .footer a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+
+        .radio-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        @media screen and (max-width: 500px) {
+            .header div{
+                display: flex;
+            }
+            .header a{
+                font-size: 0.5rem;
+            }
+            .for-mobile {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img alt="Amazon logo" src="Amazon-Logo.png" />
+            <div>
+                <a href="#">
+                    Sign In
+                </a>
+                <a href="#" class="for-mobile">
+                    Shipping &amp; Payment
+                </a>
+                <a href="#">
+                    Gift Options
+                </a>
+                <a href="#">
+                    Place Order
+                </a>
+            </div>
+        </div>
+        <h1>
+            Select a shipping address
+        </h1>
+        <h2>
+            Enter a new shipping address.
+        </h2>
+        <p>
+            When finished, click the "Continue" button.
+        </p>
+        <form>
+            <div>
+                <label for="full-name">
+                    Full name:
+                </label>
+                <input id="full-name" type="text" placeholder="ex:Adam kile" required/>
+            </div>
+            <div>
+                <label for="address-line-1">
+                    Address line 1:
+                </label>
+                <input id="address-line-1" type="text" placeholder="landmark" />
+            </div>
+            <div>
+                <label for="address-line-2">
+                    Address line 2:
+                </label>
+                <input id="address-line-2" placeholder="Apartment, suite, unit, building, floor, etc." type="text" />
+            </div>
+            <div>
+                <label for="city">
+                    City:
+                </label>
+                <input id="city" type="text" placeholder="ex:Portland" />
+            </div>
+            <div>
+                <label for="state">
+                    State/Province/Region:
+                </label>
+                <input id="state" type="text" placeholder="ex:Oregon" />
+            </div>
+            <div>
+                <label for="zip">
+                    ZIP:
+                </label>
+                <input id="zip" type="text" placeholder="ex:97251" required/>
+            </div>
+            <div>
+                <label for="country">
+                    Country/Region:
+                </label>
+                <input id="country" type="text" placeholder="ex:United States"/>
+            </div>
+            <div>
+                <label for="phone">
+                    Phone number:
+                    <a href="#">
+                        (Learn more)
+                    </a>
+                </label>
+                <input id="phone" type="text" placeholder="ex:9719989313" required/>
+            </div>
+            <div class="optional">
+                <h3>
+                    Add delivery instructions (optional)
+                </h3>
+                <div>
+                    <label for="instructions">
+                        Do we need additional instructions to find this address?
+                    </label>
+                    <textarea id="instructions"
+                        placeholder="Provide details such as building description, a nearby landmark, or other navigation instructions">
+</textarea>
+                </div>
+                <div>
+                    <label for="security-code">
+                        Do we need a security code or a call box number to access this building?
+                    </label>
+                    <input id="security-code" type="text" placeholder="ex:1234" />
+                </div>
+            </div>
+            <div>
+                <label>
+                    Weekend delivery:
+                </label>
+                <a href="#">
+                    Which days can you receive packages?
+                </a>
+            </div>
+            <div>
+                <label>
+                    Is this address also your billing address (the address that appears on your credit card or bank
+                    statement)?
+                </label>
+                <div class="radio-group">
+                    <input id="billing-yes" name="billing-address" type="radio" value="yes" />
+                    <label for="billing-yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="radio-group">
+                    <input checked="" id="billing-no" name="billing-address" type="radio" value="no" />
+                    <label for="billing-no">
+                        No (If not, we'll ask you for it in a moment.)
+                    </label>
+                </div>
+            </div>
+            <div>
+                <button type="submit">
+                    Continue
+                </button>
+            </div>
+        </form>
+        <div class="footer">
+            <h3>
+                Address Accuracy
+            </h3>
+            <p>
+                Make sure you get your stuff! If the address is not entered correctly, your package may be returned as
+                undeliverable. You would then have to place a new order. Save time and avoid frustration by entering the
+                address information in the appropriate boxes and double-checking for typos and other errors. Need help?
+            </p>
+            <a href="#">
+                General Address Tips
+            </a>
+            <br />
+            <a href="#">
+                APO/FPO Address Tips
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
